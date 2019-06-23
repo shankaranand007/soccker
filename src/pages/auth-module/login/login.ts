@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import {  NavController, NavParams, MenuController } from 'ionic-angular';
+import {  NavController, NavParams, MenuController, ToastController } from 'ionic-angular';
 import * as OktaAuth from '@okta/okta-auth-js';
 import { OAuthService } from 'angular-oauth2-oidc';
 
@@ -35,6 +35,7 @@ export class LoginPage {
   constructor(
     private navCtrl: NavController,
     private spinner: Spinner,
+    private toastCtrl: ToastController,
     private login_serive:LoginService,
     private storage: StorageProvider,
     private state: State,
@@ -89,6 +90,17 @@ export class LoginPage {
     this.login_serive.login(this.login_values)
     .subscribe(data=>{
       console.log(data,"login page")
+      if(data == 'Unauthorised'){
+         let errToastr = this.toastCtrl.create({
+          message: 'There was a problem while logging into app. Please try again',
+          duration: 4000,
+          position: 'top',
+          cssClass: 'customToaster-error'
+        });
+        errToastr.present(errToastr);
+      }else{
+        this.navCtrl.push(IntroPage)
+      }
     })
     // this.spinner.show();
     // this.navCtrl.push(IntroPage)

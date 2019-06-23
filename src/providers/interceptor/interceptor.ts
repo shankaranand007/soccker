@@ -7,11 +7,12 @@ import { Spinner } from '../spinner/spinner';
 // import { appConfig } from '../../app.config';
 // import { appConfig } from '../../../assets/env.prod';
 import {appConfig } from '../../environments/environment';
+import { ToastController } from 'ionic-angular';
 
 @Injectable()
 export class InterceptorProvider implements HttpInterceptor {
 
-  constructor(private appBroadcast: AppBroadcast, private loading: Spinner ) { }
+  constructor(private appBroadcast: AppBroadcast, private loading: Spinner,private toastCtrl: ToastController, ) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let request = req;
@@ -73,7 +74,13 @@ console.log(request,"intercepter")
           // this.appService.resetBusy();
           if (err instanceof HttpErrorResponse) {
               if (err.status === 0) {
-                  // this.appService.showToasterErrMsg('Server Unreachable');
+                let errToastr = this.toastCtrl.create({
+                            message: 'There was a problem while logging into app. Please try again',
+                            duration: 4000,
+                            position: 'top',
+                            cssClass: 'customToaster-error'
+                          });
+                          errToastr.present(errToastr);
               } else {
                   if (err.status >= 500) {
                       // this.appService.showToasterErrMsg(appConst.ERROR_MSG.INTERVAL_SERVER_ERROR);
