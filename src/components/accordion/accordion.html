@@ -1,0 +1,18 @@
+<ion-card>
+  <ion-card-header (click)="toggleAccordion()">
+    <ion-list>
+      <ion-item >
+      <!-- <ion-item  [color]="isDisabled ? 'disable' : 'light'"> -->
+        <button ion-button clear small icon-only item-right>
+          <ion-icon color="dark" [name]="icon"></ion-icon>
+        </button>
+        <div class="header">
+          <ng-content select="accordion-header"></ng-content>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card-header>
+  <ion-card-content #cc>
+    <ng-content select="accordion-body"></ng-content>
+  </ion-card-content>
+</ion-card>

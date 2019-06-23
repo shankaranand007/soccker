@@ -1,0 +1,56 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button (click)="pop()" class="subpage-header-icon" ion-button icon-only>
+              <span class="font-1point5rem txt-transform-none"> Back </span>
+        
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title> Search</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 text-right>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contentbg" padding>
+  <ion-grid no-padding>
+    <ion-row margin-bottom no-padding align-items-center>
+      <ion-col no-padding>
+          <ion-searchbar class="customSearchBar" placeholder="Search Vendors" (ionClear)="searchedData($event)"   (ionInput)="searchedData($event)"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card class="vendor-card" *ngFor="let vendor of searchedVendorList">
+    <ion-row (click)="getDetails(vendor.id)">
+
+      <ion-col no-padding col-2 class="vendor-card-user-profile">
+        <img [src]="vendor.logo">
+      </ion-col>
+
+      <ion-col no-padding col-10 class="vendor-card-content">
+        <ion-row col-12>
+          <ion-col no-padding col-12 class="vendor-card-title">
+            {{vendor.name}}
+          </ion-col>
+          <ion-col no-padding col-12 class="vendor-description">
+            {{vendor.employeesCount}} Employees
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </ion-card>
+ 
+
+</ion-content>

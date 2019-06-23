@@ -1,0 +1,58 @@
+<ion-content class="login-background">
+  <ion-card no-margin login-card class="fullWidth">
+    <img src="../../assets/imgs/loginbg.png" />
+    <div class="card-title">
+        <span class="icon-iff"></span>
+      Welcome!
+      <div class="card-subtitle">Login to continue</div>
+    </div>
+  </ion-card>
+  <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10 mx-auto text-center>
+          <ion-item logintextfield>
+            <ion-label color="primary" floating>Mobile</ion-label>
+            <ion-input name="username" id="mob" type="number" max="10" required [(ngModel)]="login_values.mobile" name="mobile" #mobile></ion-input>
+          </ion-item>
+          <ion-item logintextfield>
+            <ion-label color="primary" floating>Password</ion-label>
+            <ion-input name="username" id="pass" type="password" required [(ngModel)]="login_values.password" name="password" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-10 mx-auto text-center *ngIf="isTokenRequired">
+          <ion-item logintextfield>
+            <ion-label color="primary" floating>Common Password</ion-label>
+            <ion-input name="password" id="passwordField" type="{{type}}" required [(ngModel)]="password"></ion-input>
+            <button eyeIcon *ngIf="!showPass" ion-button clear type="button" item-right (click)="showPassword()">
+              <span class="icon-eye"></span>
+            </button>
+            <button eyeIcon *ngIf="showPass" ion-button clear type="button" item-right (click)="showPassword()">
+              <span class="icon-hide-eye"></span>
+            </button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10 mx-auto text-center>
+          <div *ngIf="error" red text-left>{{error}}</div>
+          <button loginbutton ion-button block type="submit" [disabled]="!loginForm.form.valid">Submit
+          </button>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10 mx-auto text-center>
+          <p (click)="signup()">Signup</p>
+          <p (click)="forgot()">Forgot password</p>   
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <!-- <button type="button" (click)="checktouchid()">touchID
+  </button> -->
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true" color="primary">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button (click)="pop()" class="subpage-header-icon" ion-button icon-only>
+              Back
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-10 text-center>
+          <ion-title>Events</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-item (press)="pressEvent(list)" (tap)="tapEvent(list)" *ngFor="let list of lists">
+    <ion-label>
+      {{list.title}}
+    </ion-label>
+  </ion-item>
+</ion-content>

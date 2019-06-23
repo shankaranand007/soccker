@@ -1,0 +1,81 @@
+.login-background {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9b6a+41,f95197+69 */
+background: #ff9b6a; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ff9b6a 41%, #f95197 69%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #ff9b6a 41%,#f95197 69%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #ff9b6a 41%,#f95197 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9b6a', endColorstr='#f95197',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        ion-card {
+          position: relative;
+          text-align: left;
+        }
+        .card-title {
+          position: absolute;
+          top: 25%;
+          font-size: 3.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #f95197;
+          margin-left: 50px;
+          .card-subtitle {
+            font-size: 0.4em;
+            width: 100%;
+            color: #f95197;
+          }
+          .card-subtitle-verify {
+            font-size: 0.7em;
+            width: 100%;
+            color: #f95197;
+          }
+        }
+      }
+      [login-card]{
+        background: none;
+        box-shadow: none;
+    }
+    
+    [logintextfield] {
+        background: none;
+        padding-left: 0;
+        color: #fff;
+        align-items: flex-end;
+        .label {
+          color: #fff;
+        }
+        &.item-input-has-focus {
+          .label {
+            color: #fff;
+          }
+          .item-inner {
+              border-bottom-color: #dedede !important;
+              box-shadow: none !important;
+          }
+        }
+        .item-inner {
+            padding-right: 0 !important;
+            border-bottom-color: #dedede !important;
+            box-shadow: none !important;
+        }
+      }
+      [eyeIcon] {
+        background: none;
+        color: rgba($color: #fff, $alpha: 0.5);
+        margin: 0 !important;
+        padding: 16px 0 18px 0 !important;
+        span {
+          font-size: 32px;
+        }
+      }
+      [loginbutton]{
+          color: #f95197;
+          background: #fff;
+          margin-top: 25px;
+          &.activated{
+              background: rgba($color: #fff, $alpha: .8);
+          }
+      }
+ [verifyQuestion]{
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.4;
+ }

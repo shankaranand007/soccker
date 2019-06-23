@@ -1,0 +1,69 @@
+<ion-header color="light" class="custom-ion-header">
+
+  <ion-navbar hideBackButton="true" color="primary">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button ion-button icon-only menuToggle>
+              <ion-icon name='menu'></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title>Settings</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 text-right>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contentbg" padding>
+  <form [formGroup]="frmSetting">
+    <ion-grid no-padding>
+      <ion-row align-items-start margin-bottom padding page-list-box>
+        <ion-col col-12>
+          <ion-item font14 no-border-bottom no-padding no-inner-padding-right>
+            <ion-label no-margin font-weight-bold>Push Notification</ion-label>
+            <ion-toggle customtoggleblue formControlName="pushNotification"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-start margin-bottom padding page-list-box>
+        <ion-col col-12>
+          <ion-item font14 no-border-bottom no-padding no-inner-padding-right>
+            <ion-label no-margin font-weight-bold>Touch ID</ion-label>
+            <ion-toggle customtoggleblue formControlName="touchID" (ionChange)="onchangeTouch();"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-start margin-bottom padding page-list-box>
+        <ion-col col-12>
+          <ion-item font14 no-border-bottom no-padding no-inner-padding-right>
+            <ion-label no-margin font-weight-bold>Sound</ion-label>
+            <ion-toggle customtoggleblue formControlName="vibrate"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-start margin-bottom padding page-list-box>
+        <ion-col col-12>
+          <ion-item font14 no-border-bottom no-padding no-inner-padding-right>
+            <ion-label no-margin font-weight-bold>Vibrate</ion-label>
+            <ion-toggle customtoggleblue formControlName="locationTracking"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-start padding page-list-box>
+        <ion-col col-12>
+          <ion-item font14 no-border-bottom no-padding no-inner-padding-right>
+            <ion-label no-margin font-weight-bold>Email Notification</ion-label>
+            <ion-toggle customtoggleblue formControlName="emailNotification"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

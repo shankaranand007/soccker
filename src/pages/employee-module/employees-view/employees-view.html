@@ -1,0 +1,171 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button ion-button icon-only (click)="pop()">
+              <span class="font-1point5rem"> Back </span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title>{{employee.Name}}</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 text-right>
+          <ion-buttons padding-right>
+            <button class="header-icon" ion-button icon-only (click)="edit()">
+              <span class="icon-edit"></span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+  <ion-grid class="employee-details-card">
+
+    <ion-row>
+      <ion-col col-12 no-padding class="employee-profile">
+        <div class="employee-profile-img-wrapper">
+          <img [src]="employee.ProfileImg">
+        </div>
+        <div class="employee-profile-img-shadow"></div>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row class="employee-profile-header">
+      <ion-col no-padding col-12>
+        {{employee.Name}}
+      </ion-col>
+      <ion-col no-padding col-12>
+        {{employee.Vendor}}
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-row margin-bottom>
+      <ion-col col-12 no-padding>
+        <ion-segment class="customSegment w-100" [(ngModel)]="homepagetab">
+          <ion-segment-button class="custom-segment-button" value="personaldetials">
+            Personal Detials
+          </ion-segment-button>
+          <ion-segment-button class="custom-segment-button" value="projectdetails">
+            Project Details
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+    <ion-row>
+      <ion-col col-12 no-padding>
+        <div [ngSwitch]="homepagetab">
+
+          <ion-list *ngSwitchCase="'personaldetials'">
+            <ion-grid class="Segment-content personal-detials-Segment">
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Name:
+                </ion-col>
+                <ion-col no-padding col-12>
+                  {{employee.Name}}
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Company Name:
+                </ion-col>
+                <ion-col no-padding col-12>
+                  {{employee.Vendor}}
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Address:
+                </ion-col>
+                <ion-col no-padding col-12>
+                  {{employee.address}}
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Primary contact:
+                </ion-col>
+                <ion-col no-padding col-12 class="highlight-text-blue">
+                  {{employee.mailID}}
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Contact Number:
+                </ion-col>
+                <ion-col no-padding col-12 class="highlight-text-blue">
+                  {{employee.contactNo}}
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Contact Period:
+                </ion-col>
+                <ion-col no-padding col-12>
+                  25-Jan-2019 to 25-Aug-2019
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+
+
+          <ion-list *ngSwitchCase="'projectdetails'">
+            <ion-grid class="Segment-content project-detials-Segment">
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Project Name:
+                </ion-col>
+                <ion-col no-padding col-12>
+                  {{employee.projectName}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col no-padding col-12>
+                  Duration:
+                </ion-col>
+                <ion-col no-padding col-12>
+                  3 months
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,8 @@
+page-demo {
+  .item-ios{
+    padding-left: unset;
+  }
+  .item-ios.item-block .item-inner{
+    padding-left: 8px;
+  }
+}

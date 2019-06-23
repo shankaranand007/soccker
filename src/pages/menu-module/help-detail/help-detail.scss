@@ -1,0 +1,144 @@
+page-help-detail {
+
+  .blackBold {
+    color:map-get($colors, dark);
+    font-weight: bold;
+  }
+
+  button.help-custom-button {
+    &.activated {
+      background: none;
+      box-shadow: none;
+    }
+
+    height: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+
+    .button-inner {
+      display: block;
+
+      ion-note {
+        display: block;
+        margin-top: 10px;
+        color: #7c7c7c;
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        position: relative;
+        left: 11px;
+        width: 50px;
+        height: 50px;
+        display: table-cell;
+        font-size: 24px;
+        border-radius: 50%;
+        vertical-align: middle;
+        background: map-get($colors, secondary) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3851f0', endColorstr='#693de7', GradientType=1);
+      }
+    }
+
+  }
+
+  .icon-right-arrow:before {
+    opacity: 0.4;
+  }
+
+  ion-item.customIonItem {
+    border: 1px solid #e6e8f3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    .item-inner {
+      border-bottom: none !important;
+    }
+
+    ion-label {
+      white-space: normal;
+
+      p {
+        color: map-get($colors, dark);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .stepsWizard {
+    border: 1px solid #e6e8f3;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 16px;
+    ion-item {
+      position: relative;
+      background: none;
+      padding-left: 71px;
+      min-height: 40px;
+      padding-bottom: 16px;
+      ion-note {
+        position: absolute;
+        left: 16px;
+        top: 0;
+        z-index: 10;
+        margin: 0 !important;
+      }
+      ion-label {
+        white-space: normal;
+        font-size: 14px;
+        margin: 0;
+      }
+      &:after {
+        content: "";
+        width: 1px;
+        background: map-get($colors, secondary);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 36px;
+        z-index: 1;
+      }
+      .item-inner {
+        border-bottom: none !important;
+        padding-right: 16px !important;
+      }
+      &:first-child {
+        margin-top: 16px;
+        &:after {
+          content: "";
+          top: 20px;
+        }
+      }
+      &:last-child {
+        &:after {
+          content: "";
+          height: 20px;
+        }
+      }
+    }
+    [blackBold] {
+      color: map-get($colors, dark);
+      font-weight: bold;
+    }
+    .countCircle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid map-get($colors, secondary);
+      vertical-align: middle;
+      text-align: center;
+      display: table-cell;
+      color: map-get($colors, secondary);
+      background: #ffffff;
+      z-index: 3;
+    }
+  }
+
+  .heading-help {
+    font-size: 2.2rem;
+  }
+
+}

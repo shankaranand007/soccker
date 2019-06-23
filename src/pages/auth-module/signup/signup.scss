@@ -1,0 +1,95 @@
+page-signup {
+
+}
+page-login {
+    .login-background {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b1ff+31,7153f9+91 */
+        background: #00b1ff;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #00b1ff 31%, #7153f9 91%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #00b1ff 31%, #7153f9 91%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #00b1ff 31%, #7153f9 91%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b1ff', endColorstr='#7153f9', GradientType=0);
+        /* IE6-9 */
+        ion-card {
+            position: relative;
+            text-align: left;
+        }
+        .card-title {
+            position: absolute;
+            top: 25%;
+            font-size: 3.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #f95197;
+            margin-left: 50px;
+            .icon-iff {
+                display: block;
+                font-size: 26px;
+                margin-bottom: 10px;
+                &:before {
+                    content: "\e901";
+                    color: #0138a0;
+                }
+            }
+            .card-subtitle {
+                font-size: 0.4em;
+                width: 100%;
+                color: #f95197;
+            }
+        }
+    }
+    [login-card] {
+        background: none;
+        box-shadow: none;
+    }
+    [logintextfield] {
+        background: none;
+        padding-left: 0;
+        color: #fff;
+        align-items: flex-end;
+        .label {
+            color: #fff;
+        }
+        &.item-input-has-focus {
+            .label {
+                color: #fff;
+            }
+            .item-inner {
+                border-bottom-color: #dedede !important;
+                box-shadow: none !important;
+            }
+        }
+        .item-inner {
+            padding-right: 0 !important;
+            border-bottom-color: #dedede !important;
+            box-shadow: none !important;
+        }
+    }
+    [eyeIcon] {
+        background: none;
+        color: rgba($color: #fff, $alpha: 0.5);
+        margin: 0 !important;
+        padding: 16px 0 18px 0 !important;
+        span {
+            font-size: 32px;
+        }
+    }
+    [loginbutton] {
+        color: #3c81ff;
+        background: #fff;
+        margin-top: 25px;
+        &.activated {
+            background: rgba($color: #fff, $alpha: .8);
+        }
+    }
+    .forgot {
+        color: rgba($color: #fff, $alpha: 0.5);
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+}

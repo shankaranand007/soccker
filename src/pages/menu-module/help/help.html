@@ -1,0 +1,78 @@
+<ion-header class="custom-ion-header">
+    <ion-navbar hideBackButton="true" color="primary">
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col no-padding col-2 text-left>
+            <ion-buttons pl-1>
+              <button ion-button icon-only menuToggle>
+                <ion-icon name='menu'></ion-icon>
+              </button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col no-padding col-8 text-center>
+            <ion-title>Help</ion-title>
+          </ion-col>
+          <ion-col no-padding col-2 text-right>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content class="contentbg" padding>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-12>
+          <h1 class="heading-help" no-margin font-weight-bold>Trending Questions?</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row margin-bottom>
+        <ion-col col-12>
+          <ion-item ion-textfield no-padding no-bg> -->
+            <ion-label lightgrey floating><span class="custom-icon-Search-Icon"></span> Search your questions</ion-label>
+            <ion-input #searchQuestion (keyup)="filterQuestions(searchQuestion.value)" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row margin-bottom>
+        <ion-col col-12  *ngFor="let question of viewQuestions">
+          <ion-item (click)="openHelpDetailedPage(question.key, question.steps)" class="customIonItem">
+            <ion-label>
+              <p>{{question.title}}</p>
+            </ion-label>
+            <ion-note item-end>
+              <span class="icon-right-arrow"></span>
+            </ion-note>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row mb-5>
+        <ion-col col-12>
+          <h1 class="heading-help" no-margin font-weight-bold>How can we help</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row margin-bottom>
+        <ion-col col-12>
+          <ion-note lightgrey>
+            If you have any other issues, Please write to us and Helpdesk clarify your doubts as soon as possible
+          </ion-note>
+        </ion-col>
+      </ion-row>
+      <ion-row margin-top>
+          <ion-col col-4>
+            <a [href]="mailLink">
+            <button class="help-custom-button" ion-button >
+              <span class="icon-email"></span>
+              <ion-note>SEND EMAIL</ion-note>
+            </button>
+          </a>
+          </ion-col>
+          <ion-col>
+            <button no-margin no-padding class="help-custom-button" ion-button>
+              <span class="icon-chatbox"></span>
+              <ion-note>LET'S CHAT</ion-note>
+            </button>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+  </ion-content>

@@ -1,0 +1,450 @@
+[font-weight-bold] {
+    font-weight: bold !important;
+}
+
+[lightgrey] {
+    color: #a1a1a1 !important;
+}
+
+[blue] {
+    color: #3452f1 !important;
+}
+
+[red] {
+    color: #ff0000 !important;
+}
+
+[darkred] {
+    color: #e50e0e !important;
+}
+
+.fullWidth {
+    width: 100% !important;
+}
+
+[mx-auto] {
+    margin: 0 auto;
+}
+
+[h44px] {
+    height: 44px;
+}
+
+[d-block] {
+    display: block;
+}
+
+[no-margin-top] {
+    margin-top: 0 !important;
+}
+
+[no-border-top] {
+    border-top: none !important;
+}
+
+[no-border-bottom] {
+    border-bottom: none !important;
+    .item-inner {
+        border-bottom: none !important;
+    }
+}
+
+ion-note.note {
+    color: #000000;
+}
+
+[mt-5] {
+    margin-top: 5px;
+}
+
+[mb-5] {
+    margin-bottom: 5px !important;
+}
+
+[mb-9px] {
+    margin-bottom: 9px;
+}
+
+[mr-10] {
+    margin-right: 10px;
+}
+
+[margin-top-8] {
+    margin-top: 8px !important;
+}
+
+[margin-bottom-8] {
+    margin-bottom: 8px !important;
+}
+
+[mb-10] {
+    margin-bottom: 10px;
+}
+
+[mr-5] {
+    margin-right: 5px;
+}
+
+[mr-8] {
+    margin-right: 8px;
+}
+
+[ml-8] {
+    margin-left: 8px;
+}
+
+[pl-1] {
+    padding-left: 5px;
+}
+
+[pl-2] {
+    padding-left: 10px;
+}
+
+[pr-1] {
+    padding-right: 5px;
+}
+
+[pr-8] {
+    padding-right: 8px !important;
+}
+
+[pl-8] {
+    padding-left: 8px !important;
+}
+
+[pt-1] {
+    padding-top: 5px;
+}
+
+[pb-1] {
+    padding-bottom: 5px;
+}
+
+[mb-1] {
+    margin-bottom: 5px;
+}
+
+[lineheight22] {
+    line-height: 22px;
+}
+
+[font10] {
+    font-size: 10px !important;
+}
+
+[font13] {
+    font-size: 13px !important;
+}
+
+[font14] {
+    font-size: 14px !important;
+}
+
+[font18] {
+    font-size: 18px !important;
+}
+
+[font20] {
+    font-size: 20px !important;
+}
+
+[font22] {
+    font-size: 22px !important;
+}
+
+[font24] {
+    font-size: 24px !important;
+}
+
+[font25] {
+    font-size: 25px !important;
+}
+
+[font30] {
+    font-size: 30px !important;
+}
+
+[font35] {
+    font-size: 35px !important;
+}
+
+[w28] {
+    width: 28px;
+}
+
+[position-relative] {
+    position: relative;
+}
+
+[no-inner-padding-right] {
+    .item-inner {
+        padding-right: 0px !important;
+    }
+}
+
+[no-padding-top] {
+    padding-top: 0 !important;
+}
+
+[buttonposition] {
+    position: relative;
+    right: 15px;
+}
+
+.custom-icon-Arrow-Down,
+.custom-icon-Arrow-Up {
+    color: #a1a1a1;
+}
+
+[max-width-100] {
+    max-width: 100%;
+    width: 100%;
+}
+
+button.subpage-header-icon {
+    font-size: 14px;
+}
+
+ion-item[icon-hdr] {
+    min-height: 0;
+    background: none;
+    .input-wrapper {
+        margin-left: 20px;
+        ion-label {
+            margin: 0;
+        }
+    }
+    [no-margin] {
+        margin: 0 !important;
+    }
+}
+
+[w-100] {
+    width: 100% !important;
+}
+
+[p-16] {
+    padding: 16px;
+}
+
+.customList {
+    box-shadow: 0px 0px 40px 0px rgba(220, 220, 220, 0.7);
+    button {
+        box-shadow: 0px 0px 40px 0px rgba(220, 220, 220, 0.7);
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
+}
+
+[no-bg] {
+    background: none !important;
+}
+
+ion-buttons[btn-reset] {
+    margin: 0;
+    button {
+        background: none;
+        color: #5658ff;
+        height: auto;
+        margin: 0;
+        box-shadow: none;
+        &.activated {
+            background: none;
+            box-shadow: none;
+        }
+    }
+}
+
+[blue1-font] {
+    color: #5658ff;
+}
+
+[pt-0] {
+    padding-top: 0 !important;
+}
+
+[mr-5] {
+    margin-right: 5px;
+}
+
+[mr-10] {
+    margin-right: 10px;
+}
+
+[vertical-align-bottom] {
+    vertical-align: bottom !important;
+}
+
+.positionfix {
+    position: relative;
+    bottom: 8px;
+}
+
+[w-50] {
+    width: 50% !important;
+}
+
+[darkgrey] {
+    color: #606060 !important;
+}
+
+button.slimButtom {
+    box-shadow: none;
+    height: auto;
+    font-weight: 700;
+    padding: 0.4em 0.5em;
+    font-size: 1.3rem;
+    margin: 0;
+    &.action-color-one {
+        background: #f87a1d;
+        &.activated {
+            background: #f87a1d;
+        }
+    }
+    &.action-color-two {
+        background: #e72df8;
+        &.activated {
+            background: #e72df8;
+        }
+    }
+}
+
+[no-border-radius-top] {
+    border-radius: 0px 0px 5px 5px !important;
+    ion-icon {
+        margin: 0 !important;
+    }
+}
+
+[no-border-radius-bottom] {
+    border-radius: 5px 5px 0px 0px !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    ion-icon {
+        margin: 0 !important;
+    }
+}
+
+[p-8] {
+    padding: 8px !important;
+}
+
+[mb-8] {
+    margin-bottom: 8px !important;
+}
+
+[d-inline-block] {
+    display: inline-block !important;
+}
+
+[img-ht-150] {
+    height: 150px;
+}
+
+[img-ht-125] {
+    height: 125px;
+}
+
+[img-ht-175] {
+    height: 175px;
+    width: 100%;
+}
+
+.customTextfield01 {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 90%;
+}
+
+[center-Image] {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+}
+
+[Green-text] {
+    color: #25dbaa;
+}
+
+[grey-text] {
+    color: #b2b2b3;
+}
+
+[center-text] {
+    text-align: center;
+}
+
+[filterbuttonv2] {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: inline-block;
+}
+
+[overflow-hidden] {
+    overflow: hidden !important;
+}
+
+[flex-display] {
+    display: flex;
+    [align-to-bottom] {
+        align-self: flex-end;
+    }
+}
+
+[wt-100] {
+    width: 100%
+}
+
+.loading-custom-spinner-container {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 150px;
+}
+
+ion-loading {
+    ion-backdrop {
+        opacity: 0.9 !important;
+        background: #fff;
+    }
+    .loading-wrapper {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+ion-title {
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 31px !important;
+    .toolbar-title {
+        color: #ffffff;
+        font-weight: bold;
+    }
+}
+
+.overflow-scrolling-auto {
+    -webkit-overflow-scrolling: auto !important
+}
+
+.hide_visibility {
+    visibility: hidden !important;
+    display: unset !important;
+}
+
+.custom-spinner {
+    background: "./../imgs/loader.gif"
+}
+
+ion-modal {
+    ion-backdrop {
+        visibility: visible !important;
+        z-index: 0 !important;
+    }
+    .modal-wrapper {
+        border-radius: 16px !important;
+    }
+}

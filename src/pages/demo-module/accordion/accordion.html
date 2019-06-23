@@ -1,0 +1,115 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true" color="primary">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button (click)="pop()" class="subpage-header-icon" ion-button icon-only>
+              Back
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title>Accordion</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 text-right>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contentbg" padding>
+  <ion-row margin-bottom>
+    <ion-col col-12 no-padding>
+      <ion-segment class="customSegment w-100" [(ngModel)]="projectTab">
+        <ion-segment-button class="custom-segment-button" value="currentProjects">
+          <strong> Open ({{currentProjects.length}}) </strong>
+        </ion-segment-button>
+        <ion-segment-button class="custom-segment-button" value="completedProjects">
+          <strong>Completed ({{completedProjects.length}}) </strong>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-12 no-padding>
+
+      <div [ngSwitch]="projectTab">
+        <ion-list class="custom-item-sliding-list" *ngSwitchCase="'currentProjects'">
+          <ng-container *ngFor="let project of currentProjects">
+
+            <accordion [accordionExpanded]=project.accordionStatus>
+              <accordion-header>
+                <div style="color:#1f1e1e">
+                  Project #: <span class="bold-title">{{project.id}}</span>
+                  <br>
+                  Customer: <span class="bold-title">{{project.customerName}}</span>
+                </div>
+              </accordion-header>
+              <accordion-body>
+                <hr style="margin-bottom:0.5px">
+                <ion-list>
+                  <ng-container *ngFor="let order of project.orders">
+                    <ion-item>
+                      <div class="order-item">
+                        Order: <span class="bold-title">{{order.id}}</span>
+                      </div>
+                      <div class="order-status">
+                        <span> {{order.date}} </span> |
+                        <span> {{order.currentStatus}} </span>
+                      </div>
+                    </ion-item>
+                    <hr>
+                  </ng-container>
+                </ion-list>
+
+              </accordion-body>
+            </accordion>
+          </ng-container>
+
+        </ion-list>
+
+        <ion-list class="custom-item-sliding-list" *ngSwitchCase="'completedProjects'">
+          <ng-container *ngFor="let project of completedProjects">
+
+            <accordion [accordionExpanded]=project.accordionStatus>
+              <accordion-header>
+                <div style="color:#1f1e1e">
+                  Project #: <span class="bold-title">{{project.id}}</span>
+                  <br>
+                  Customer: <span class="bold-title">{{project.customerName}}</span>
+                </div>
+              </accordion-header>
+              <accordion-body>
+                <hr style="margin-bottom:0.5px">
+                <ion-list>
+                  <ng-container *ngFor="let order of project.orders">
+                    <ion-item>
+                      <div class="order-item">
+                        Order: <span class="bold-title">{{order.id}}</span>
+                      </div>
+                      <div class="order-status">
+                        <span> {{order.date}} </span> |
+                        <span> {{order.currentStatus}} </span>
+                      </div>
+                    </ion-item>
+                    <hr>
+                  </ng-container>
+                </ion-list>
+
+              </accordion-body>
+            </accordion>
+          </ng-container>
+
+        </ion-list>
+
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

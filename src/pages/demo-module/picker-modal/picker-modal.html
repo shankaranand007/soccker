@@ -1,0 +1,26 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true" color="primary">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button (click)="pop()" class="subpage-header-icon" ion-button icon-only>
+              Back
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title>Picker Modal</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 text-right>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="contentbg">
+<picker [list]="list" [selectedList]="selectedItems" [extras]="extras"></picker>
+</ion-content>

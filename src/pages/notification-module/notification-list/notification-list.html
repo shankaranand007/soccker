@@ -1,0 +1,164 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-4 header-left-icons>
+          <ion-buttons>
+            <button ion-button icon-only menuToggle>
+              <ion-icon name='menu'></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-4 header-title>
+          <ion-title>Notification</ion-title>
+        </ion-col>
+        <ion-col no-padding col-4 header-right-icons>
+          <ion-buttons padding-right>
+            <button (click)="search()" ion-button icon-only>
+              <span class="icon-search"></span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+
+
+<ion-content>
+  <ion-list class="pd-15px">
+    <ion-row>
+      <ion-col col-12 no-padding class="day">
+        <strong>Today(2)</strong>
+      </ion-col>
+      <ion-col col-12 no-padding class="">
+
+
+
+        <ion-card margin-bottom no-margin w-100 class="notification-card">
+          <ion-card-content class="notification-card-content">
+            <ion-row>
+              <ion-col col-2 no-padding class="notification-left-icon">
+                <span class="icon-delivered"></span>
+              </ion-col>
+
+              <ion-col col-10 no-padding>
+                <ion-row>
+                  <div><strong class="card-title-text">Colin Ochel</strong> <span class="card-title-text-type-1">
+                      Contract</span><strong Strong-text-one class="card-alert-text-bold-large"> Expires</strong><span
+                      class="card-title-text-type-1"> in </span><b class="card-title-text">2 days.</b></div>
+                </ion-row>
+                <ion-row mt-10 class="notification-meta">
+                  <div>
+                    <span>12.30 AM</span>
+                    <span class="separator">|</span>
+                    <span>From - <strong>Aspire Systems India Pvt Ltd</strong></span>
+                  </div>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+
+
+        <ion-card margin-bottom no-margin w-100 mt-10 class="notification-card">
+          <ion-card-content class="notification-card-content">
+            <ion-row>
+              <ion-col col-2 no-padding class="notification-left-icon">
+                <span class="icon-calender"></span>
+              </ion-col>
+
+              <ion-col col-10 no-padding>
+                <ion-row>
+                  <div> <strong class="card-title-text">Aspire Systems India Pvt Ltd</strong> <span
+                      class="card-title-text-type-1">Contract</span> <strong Strong-text-one
+                      class="card-alert-text-bold-large"> Expires</strong><span class="card-title-text-type-1"> in</span> <b
+                      class="card-title-text">3 days.</b></div>
+                </ion-row>
+                <ion-row mt-10>
+                  <div class="notification-meta">
+                    <span>10.30 AM</span>
+
+                  </div>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+
+
+    <ion-row>
+      <ion-col col-12 no-padding class="day">
+        <strong>Yesterday(2)</strong>
+      </ion-col>
+
+      <ion-col col-12 no-padding class="">
+        <ion-card margin-bottom no-margin w-100 mt-10 class="notification-card">
+          <ion-card-content class="notification-card-content">
+            <ion-row>
+              <ion-col col-2 no-padding class="notification-left-icon">
+                <span class="icon-comment"></span>
+              </ion-col>
+
+              <ion-col col-10 no-padding>
+                <ion-row>
+                  <div><strong class="card-title-text">Sridhar Mahlingam </strong><span
+                      class="card-title-text-type-1">assigned to </span><strong class="card-title-text">4D Web
+                      Development.</strong></div>
+                </ion-row>
+                <ion-row mt-10>
+                  <div class="notification-meta">
+                    <span>10.30 AM</span>
+                    <span class="separator">|</span>
+                    <span>From - <strong Strong-text-one>Aspire Systems India Pvt Ltd</strong></span>
+
+                  </div>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card margin-bottom no-margin w-100 class="notification-card">
+          <ion-card-content class="notification-card-content">
+            <ion-row>
+              <ion-col col-2 no-padding class="notification-left-icon">
+                <span class="icon-delivered"></span>
+              </ion-col>
+
+              <ion-col col-10 no-padding>
+                <ion-row>
+                  <div><strong class="card-title-text">Colin Ochel</strong> <span
+                      class="card-title-text-type-1">Contract</span><strong Strong-text-one class="card-alert-text-bold-large">
+                      Expires</strong><span class="card-title-text-type-1"> in </span><b class="card-title-text-type-1">3
+                      days.</b></div>
+                </ion-row>
+                <ion-row mt-10 class="notification-meta">
+                  <div>
+                    <span>12.30 AM</span>
+                    <span class="separator">|</span>
+                    <span>From - <strong Strong-text-one>Aspire Systems India Pvt Ltd</strong></span>
+                  </div>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+
+
+
+  </ion-list>
+</ion-content>

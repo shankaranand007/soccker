@@ -1,0 +1,35 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 header-left-icons>
+          <ion-buttons>
+            <button ion-button icon-only (click)="pop()">
+              <span class="font-1point5rem txt-transform-none"> Back </span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 header-title>
+          <ion-title>Search</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 header-right-icons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid no-padding>
+    <ion-row margin-bottom no-padding align-items-center>
+      <ion-col no-padding>
+        <ion-searchbar class="customSearchBar" placeholder="Search Notification" (ionClear)="searchedData($event)"
+          (ionInput)="searchedData($event)"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

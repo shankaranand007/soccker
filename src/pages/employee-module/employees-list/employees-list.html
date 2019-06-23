@@ -1,0 +1,115 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+
+        <ion-col no-padding col-2 header-left-icons>
+          <ion-buttons>
+            <button ion-button icon-only menuToggle>
+              <ion-icon name='menu'></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-col>
+
+        <ion-col no-padding col-6 text-center>
+          <ion-title>Employees List</ion-title>
+        </ion-col>
+
+        <ion-col no-padding col-4 header-right-icons>
+          <ion-buttons>
+            <button (click)="addEmployee()" ion-button icon-only>
+              <span class="icon-add"></span>
+            </button>
+          </ion-buttons>
+          <ion-buttons>
+            <button (click)="filterEmployee()" ion-button icon-only>
+              <span class="icon-filter"></span>
+            </button>
+          </ion-buttons>
+          <ion-buttons>
+            <button (click)="searchEmployee()" ion-button icon-only>
+              <span class="icon-search"></span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+
+
+
+
+
+
+<ion-content padding>
+
+  <ion-list class="custom-item-sliding-list">
+    <ng-container *ngFor="let emp of employees;let i = index;" >
+      <ion-item-sliding #item class="custom-item-sliding">
+        <ion-item (click)="viewEmployee(emp.id)" class="custom-ion-item">
+          <ion-row custom-sliding-design>
+
+            <ion-col no-padding col-2 class="employee-card-img">
+              <ion-avatar item-start>
+                <img [src]="emp.ProfileImg">
+              </ion-avatar>
+              <div [class]="emp.indicator"></div>
+            </ion-col>
+
+            <ion-col no-padding col-10 class="employee-card-content">
+              <ion-row>
+                <ion-col class="employee-card-title" no-padding col-12>
+                  <span class="employee-name" [innerText]="emp.Name"></span>
+                  <div class="expires-alert" *ngIf="emp.showExpires != undefined">
+                    <span class="expires-alert-title">Expires in:</span>
+                    <span class="expires-alert-info">{{emp.showExpires}}D</span>
+                  </div>
+                </ion-col>
+                <ion-col no-padding col-12 class="employee-description">
+                  <span>{{emp.Designation}}</span> at <span>{{emp.Vendor}}</span>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+
+
+
+
+
+          </ion-row>
+        </ion-item>
+
+        
+        <ion-item-options>
+          <button ion-button (click)="openTrack(project)">
+            <span class="icon-email"></span>
+          </button>
+          <button ion-button (click)="openFeedback(project)">
+            <span class="icon-call"></span>
+          </button>
+          <button ion-button (click)="openNotes(project)">
+            <span class="icon-comment"></span>
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+    </ng-container>
+  </ion-list>
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

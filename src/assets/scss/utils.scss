@@ -1,0 +1,90 @@
+//reuseable css classes are added here AND it can be extend along with the existing css...
+.card-title-text {
+    font-size: 15px;
+    font-weight: bold;
+    color: #5c5b5b;
+}
+
+.card-title-text-type-1 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #a1a1a1;
+}
+
+.card-title-text-large {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5c5b5b;
+}
+
+.card-description-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #a1a1a1;
+}
+
+.card-description-text-type-1 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #5c5b5b;
+}
+
+.card-alert-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #f9654a;
+}
+
+.card-alert-text-bold {
+    font-size: 12px;
+    font-weight: bold;
+    color: #f9654a;
+}
+
+.card-alert-text-bold-large {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f9654a;
+}
+
+.aling-div-inside-content {
+    //This css is extended to aling the div inside a div vertically center.
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-flat-design {
+    //remodified ion-cards to match the iff-theme card design.
+    margin: 10px 0px;
+    width: 100%;
+    border: 1px solid #e6e8f3;
+    border-radius: 5px;
+    box-shadow: none !important;
+}
+
+.custom-item-sliding-list {
+    margin: 0;
+    .custom-item-sliding {
+        margin: 10px 0px;
+        border-radius: 5px;
+        .custom-ion-item {
+            //Added styles to make the ion item to look like card.
+            margin: 0px;
+            width: 100%;
+            border: 1px solid #e6e8f3;
+            min-height: 70px;
+            box-shadow: none !important;
+            padding: 0px 10px;
+            border-radius: 5px;
+            .item-inner {
+                //Handled default behaviour of ion-list.
+                border: none !important;
+                padding: 0px !important;
+                ion-label {
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}

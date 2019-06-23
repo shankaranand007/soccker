@@ -1,0 +1,32 @@
+<ion-content class="login-background">
+    <ion-card no-margin login-card class="fullWidth">
+      <img src="../../assets/imgs/loginbg.png" />
+      <div class="card-title">
+          <div class="card-subtitle-verify">Login Verification</div>
+      </div>
+    </ion-card>
+    <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+      <ion-grid>
+      <ion-row>
+        <ion-col col-10 mx-auto verifyQuestion>
+          {{responsel.profile.questionText}}
+        </ion-col>
+      </ion-row>
+        <ion-row>
+          <ion-col col-10 mx-auto text-center>
+            <ion-item logintextfield>
+              <ion-label color="primary" floating>Answer</ion-label>
+              <ion-input name="answer" type="password" required [(ngModel)]="answer"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-10 mx-auto text-center>
+            <div *ngIf="error" class="red text-left ">{{error}}</div>
+            <button loginbutton ion-button block type="submit">Verify
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>

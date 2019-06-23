@@ -1,0 +1,29 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 header-left-icons>
+          <ion-buttons>
+            <button (click)="pop()" ion-button text-only>
+              Cancel
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title>{{title}}</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 header-right-icons>
+          <ion-buttons padding-right>
+            <button (click)="saveEmployee()" ion-button icon-only>
+              <span class="icon-save"></span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+</ion-content>

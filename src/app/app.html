@@ -1,0 +1,20 @@
+<ion-menu class="sideMenuHeader" [content]="content" persistent="true" type="overlay">
+  <ion-header class="custom-ion-header">
+    <div class="roundedImg">
+      <img *ngIf="userPhotoUrl" [src]="userPhotoUrl" onerror="this.onerror=null;this.src='../assets/imgs/profile-image.png';" alt="User" />
+    </div>
+    <div class="headingText" font-weight-bold mb-1>{{user?.DisplayName}}</div>
+    <div lightgrey mb-1>{{user?.Creativecenter}}</div>
+
+  </ion-header>
+
+  <ion-content>
+      <ion-list class="sideMenu">
+          <button menuClose ion-item *ngFor="let page of pages" (click)="openPage(page)">
+            <span [class]="page.icon"></span>{{page.title}}
+          </button>
+        </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

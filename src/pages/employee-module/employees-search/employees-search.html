@@ -1,0 +1,94 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 header-left-icons>
+          <ion-buttons>
+            <button ion-button icon-only (click)="pop()">
+              <span class="font-1point5rem txt-transform-none"> Back </span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 header-title>
+          <ion-title> Search</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 header-right-icons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="contentbg" padding>
+  <ion-grid no-padding>
+    <ion-row margin-bottom no-padding align-items-center>
+      <ion-col no-padding>
+        <ion-searchbar class="customSearchBar" placeholder="Search Employee" (ionClear)="searchedData($event)"
+          (ionInput)="searchedData($event)"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list class="custom-item-sliding-list">
+    <ng-container *ngFor="let emp of searchedEmployeeList;let i = index;" (click)="viewEmployee()">
+      <ion-item-sliding #item class="custom-item-sliding">
+        <ion-item class="custom-ion-item">
+          <ion-row custom-sliding-design>
+
+            <ion-col no-padding col-2 class="vendor-card-img">
+              <ion-avatar item-start>
+                <img [src]="emp.ProfileImg">
+              </ion-avatar>
+              <div [class]="emp.indicator"></div>
+            </ion-col>
+
+            <ion-col no-padding col-10 class="vendor-card-content">
+              <ion-row>
+                <ion-col class="vendor-card-title" no-padding col-12>
+                  <ion-row>
+                    <ion-col no-padding>
+                      <span class="employee-name" [innerText]="emp.Name"></span>
+                    </ion-col>
+                  </ion-row>
+
+
+                  <div class="expires-alert" *ngIf="emp.showExpires != undefined">
+                    <span class="expires-alert-title">Expires in:</span>
+                    <span class="expires-alert-info">{{emp.showExpires}}D</span>
+                  </div>
+                </ion-col>
+                <ion-col no-padding col-12 class="vendor-description">
+                  <span>{{emp.Designation}}</span> at <span>{{emp.Vendor}}</span>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+          </ion-row>
+        </ion-item>
+
+        <ion-item-options>
+          <button ion-button color="primary" (click)="openTrack(project)">
+            <ion-icon name="icon-email"></ion-icon>
+          </button>
+          <button ion-button color="primary" (click)="openFeedback(project)">
+            <ion-icon name="icon-call"></ion-icon>
+          </button>
+          <button ion-button color="primary" (click)="openNotes(project)">
+            <span class="icon-Notes"></span>
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+    </ng-container>
+  </ion-list>
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

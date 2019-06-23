@@ -1,0 +1,394 @@
+//IONIC - COMMON HEADER - CSS
+ion-header.custom-ion-header {
+    .toolbar-background {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b1ff+31,7153f9+91 */
+        background: #00b1ff;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #00b1ff 31%, #7153f9 91%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #00b1ff 31%, #7153f9 91%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #00b1ff 31%, #7153f9 91%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b1ff', endColorstr='#7153f9', GradientType=0);
+        /* IE6-9 */
+    }
+    ion-title {
+        padding: 0 !important;
+        height: auto !important;
+        min-height: 31px !important;
+        .toolbar-title {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.9rem !important;
+        }
+    }
+    ion-buttons {
+        display: inline-block;
+        margin-right: 10px;
+        [text-only] {
+            font-size: 1.5rem !important;
+        }
+        [icon-only] {
+            font-size: 2rem !important;
+        }
+        .bar-button {
+            color: #ffffff !important;
+            &.activated {
+                color: #9c9c9c !important;
+            }
+        }
+    }
+    [header-left-icons] {
+        padding-left: 5px !important;
+        text-align: left;
+    }
+    [header-title] {
+        text-align: center;
+    }
+    [header-right-icons] {
+        text-align: right;
+    }
+}
+
+ion-content {
+    background-color: #f1f1f1 !important;
+}
+
+//IONIC - SUBTAB - FOOTER - CSS
+ion-tabs {
+    .tabbar {
+        background: #ffffff !important;
+        box-shadow: 0px 0px 40px 0px rgba(220, 220, 220, 0.7);
+        a:nth-child(4) {
+            visibility: hidden;
+        }
+        a:nth-child(3) {
+            display: inline-block;
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            left: 50%;
+            top: -31px;
+            margin-left: -37px;
+            border-radius: 50%;
+            box-shadow: 1px -12px 41px -13px rgba(0, 0, 0, 0.3);
+            border: 10px solid #fff;
+            background: #ffffff;
+            span {
+                display: none;
+            }
+            .tab-button-icon {
+                margin-top: 14px;
+            }
+        }
+        .tab-button {
+            background: #ffffff;
+            .tab-button-icon,
+            .tab-button-text {
+                color: #949494;
+                font-size: 1.2rem;
+            }
+        }
+        .tab-button[aria-selected=true] {
+            .tab-button-icon {
+                color: #3ed8ad !important;
+            }
+            .tab-button-text {
+                color: #2e2e2e !important;
+            }
+        }
+        .tab-badge {
+            // right: calc(50% - 38px);
+            top: 10%;
+            background-color: #f54905;
+        }
+        [aria-controls="tabpanel-t0-2"] {
+            .tab-badge {
+                right: calc(50% - 28px);
+            }
+        }
+        [aria-controls="tabpanel-t0-3"] {
+            .tab-badge {
+                right: calc(50% - 31px);
+            }
+        }
+    }
+}
+
+//IONIC - SIDE MENU HEADER - CSS
+.sideMenuHeader {
+    ion-header {
+        text-align: center;
+        padding: 35px;
+        .roundedImg img {
+            border-radius: 50%;
+        }
+        .headingText {
+            margin-top: 10px;
+            font-size: 2.5rem;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+    }
+    ion-content {
+        background-color: #fff !important;
+        .sideMenu {
+            button {
+                font-size: 1.5rem;
+                font-weight: bold;
+                border-bottom: none !important;
+                &:not(:last-child) {
+                    border-bottom: 1px solid #f2f2f2 !important;
+                }
+                .item-inner {
+                    background: none !important;
+                    border-bottom: none !important;
+                    [class^="icon-"] {
+                        margin-right: 10px;
+                    }
+                    [class^="icon-"]::before {
+                        font-size: 1.25rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+[custom-sliding-design] {
+    //here the inner content for the sliding card is handled.
+    .employee-card-img {
+        ion-avatar {
+            margin: 0px;
+            float: left;
+            img {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 36px;
+                height: 36px;
+            }
+        }
+        .active-status {
+            height: 13px;
+            width: 13px;
+            float: left;
+            border-radius: 50px;
+            border: 1.5px solid white;
+            margin-left: -8px;
+            margin-top: 3px;
+           
+            &.role1 {
+                @extend .active-status;
+                background: #18ea00;
+            }
+            &.role2 {
+                @extend .active-status;
+                background: #ff3800;
+            }
+            &.role3 {
+                @extend .active-status;
+                background: grey;
+            }
+            &.role4 {
+                @extend .active-status;
+                background: yellow;
+            }
+            &.role5 {
+                @extend .active-status;
+                background: blue;
+            }
+        }
+    }
+    .employee-card-content {
+        .employee-card-title {
+            .employee-name {
+                @extend .card-title-text;
+                float: left;
+                padding: 0px 10px 0px 0px;
+            }
+            .expires-alert {
+                float: left;
+                margin-top: -2px;
+                .expires-alert-title {
+                    @extend .card-alert-text;
+                }
+                .expires-alert-info {
+                    @extend .card-alert-text-bold;
+                }
+            }
+        }
+        .employee-description {
+            @extend .card-description-text;
+        }
+    }
+}
+
+.vendor-card {
+    @extend .card-flat-design;
+    min-height: 80px;
+    padding: 10px;
+    .vendor-card-user-profile img {
+        width: 60px;
+        height: 60px;
+    }
+    .vendor-card-content {
+        @extend .aling-div-inside-content;
+        min-height: 60px;
+        ion-row {
+            margin-left: 15px;
+            .vendor-card-title {
+                @extend .card-title-text;
+            }
+            .vendor-description {
+                @extend .card-description-text;
+            }
+        }
+    }
+}
+
+.vendor-details-card {
+    padding: 16px;
+    background-color: white;
+    .vendorLogo img {
+        width: 150px;
+        height: 80px; // margin-left: -16px;
+    }
+    ion-row {
+        margin-bottom: 16px;
+        ion-col {
+            text-align: left;
+            &:nth-child(1) {
+                @extend .card-title-text-type-1;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                @extend .card-description-text-type-1;
+            }
+            &.highlight-text-blue {
+                color: #00afffab;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.vendor-Employees-count {
+    margin: 20px 0px 0px 0px;
+    ion-col {
+        text-align: left;
+        @extend .card-description-text;
+    }
+}
+
+.project-card {
+    @extend .card-flat-design;
+    min-height: 70px;
+    .project-card-content {
+        @extend .aling-div-inside-content;
+        min-height: 70px;
+        ion-row {
+            margin-left: 15px;
+            .project-card-title {
+                @extend .card-title-text;
+            }
+            .project-description {
+                @extend .card-description-text;
+            }
+        }
+    }
+    .project-card-user-profile {
+        @extend .aling-div-inside-content;
+        ion-avatar {
+            width: 35px;
+            float: left;
+            z-index: 1;
+            img {
+                border-radius: 50%;
+            }
+        }
+        .user-profile-background {
+            width: 75px;
+            height: 35px;
+            background: #f0f0f0;
+            color: #9a9a9a;
+            border-radius: 50px;
+            margin-left: -35px;
+            line-height: 35px;
+            text-align: center;
+        }
+    }
+}
+
+.employee-details-card {
+    padding: 16px;
+    background-color: white;
+    margin-top: 100px;
+    .employee-profile {
+        .employee-profile-img-wrapper {
+            width: 160px;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid #00000012;
+            margin-left: calc(50% - 80px);
+            margin-left: calc(50% - 80px);
+            margin-top: -120px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin: 5px 0px 0px 5px;
+            }
+        }
+        .employee-profile-img-shadow {
+            box-shadow: 0px 0px 27px 18px #00000012;
+            height: 0px;
+            background: #00000000;
+            border-radius: 50%;
+            width: 100px;
+            margin: 0 auto;
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
+    }
+    .employee-profile-header {
+        margin: 0px 0px 20px 0px;
+        ion-col {
+            text-align: center;
+            &:nth-child(1) {
+                @extend .card-title-text-large;
+            }
+            &:nth-child(2) {
+                @extend .card-description-text;
+            }
+        }
+    }
+    ion-segment {
+        ion-segment-button {
+            color: #00d994 !important;
+            &.segment-activated {
+                color: #ffffff !important;
+            }
+        }
+    }
+    .Segment-content {
+        min-height: 330px;
+        ion-row {
+            margin-bottom: 16px;
+            ion-col {
+                text-align: left;
+                &:nth-child(1) {
+                    @extend .card-title-text-type-1;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                    @extend .card-description-text-type-1;
+                }
+                &.highlight-text-blue {
+                    color: #00afffab;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

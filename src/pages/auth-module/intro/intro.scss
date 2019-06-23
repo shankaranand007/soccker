@@ -1,0 +1,81 @@
+page-intro {
+    .intro-page {
+        background: #00b1ff;
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, #00b1ff 31%, #7153f9 91%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, #00b1ff 31%, #7153f9 91%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, #00b1ff 31%, #7153f9 91%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b1ff', endColorstr='#7153f9', GradientType=0);
+        /* IE6-9 */
+        .toolbar-background {
+            background: #fff;
+            border-color: transparent;
+        }
+        .swiper-slide {
+            align-items: start;
+            margin-top: 50px;
+        }
+        .swiper-pagination {
+            bottom: 100px;
+            display: none;
+        }
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: #ffffff;
+        }
+        .intro-zoom {
+            height: 100%;
+        }
+        [positon-centered-text] {
+            position: absolute;
+            bottom: 180px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        [positon-centered-buttons] {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            z-index: 1000;
+        }
+        .intro-title {
+            color: #ffffff;
+        }
+        [skipButton] {
+            background: none;
+            height: 1em;
+            box-shadow: none;
+        }
+        [skiploginbutton] {
+            color: #3c81ff;
+            background: #fff;
+            margin-top: 25px;
+            font-weight: bold;
+            &.activated {
+                background: rgba($color: #fff, $alpha: 0.8);
+            }
+        }
+        .intro-image {
+            max-height: 50%;
+            max-width: 60%;
+            margin: 18px 0;
+        }
+        b {
+            font-weight: bold;
+        }
+        p {
+            padding: 0 40px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ffffff;
+            b {
+                color: #ffffff;
+            }
+        }
+    }
+}

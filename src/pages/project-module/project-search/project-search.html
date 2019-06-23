@@ -1,0 +1,50 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 header-left-icons>
+          <ion-buttons>
+            <button ion-button icon-only (click)="pop()">
+              <span class="font-1point5rem txt-transform-none"> Back </span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 header-title>
+          <ion-title> Search</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 header-right-icons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contentbg" padding>
+  <ion-grid no-padding>
+    <ion-row margin-bottom no-padding align-items-center>
+      <ion-col no-padding>
+        <ion-searchbar class="customSearchBar" placeholder="Search Project" (ionClear)="searchedData($event)"
+          (ionInput)="searchedData($event)"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list *ngIf="searchedProjectList.length>0">
+    <ion-item *ngFor="let project of searchedProjectList" no-border-top no-border-bottom margin-bottom-8>
+
+
+      <h2 class="card-title-text toolbar-title">{{project.name}}</h2>
+      <h2 class="card-description-text">{{project.poNumber}}</h2>
+      <div item-end class="cusToggle">
+        <ion-avatar item-end animated-background float-left class="margin-0px pr-6px">
+          <img [src]="project.projectHeadAvatar"
+            onerror="this.onerror=null;this.src='../assets/imgs/profile-image.png';" alt="Project" />
+        </ion-avatar>
+        <h2 item-end class="card-description-text float-left pt-8px margin-0px">+ {{project.teamMembersCount}}</h2>
+      </div>
+    </ion-item>
+  </ion-list>
+ 
+
+</ion-content>

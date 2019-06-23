@@ -1,0 +1,123 @@
+page-vendor-details {
+    .vendorLogo {
+        width: 150px !important;
+        height: 80px !important;
+        // margin-left: -16px;
+    }
+
+   .font-1point5rem{
+       font-size: 1.5rem !important;
+   }
+  
+    .card-title-text {
+        font-size: 15px;
+        font-weight: bold;
+        color: #5c5b5b;
+    }
+    .card-description-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: #a1a1a1;
+    }
+    .card-alert-text {
+        font-size: 12px;
+        font-weight: 400;
+        color: #f9654a;
+    }
+    .card-alert-text-bold {
+        font-size: 12px;
+        font-weight: bold;
+        color: #f9654a;
+    }
+    .active-status {
+        height: 10px;
+        width: 10px;
+        float: left;
+        border-radius: 50px;
+        border: 1px solid white;
+        margin-left: -10px;
+    }
+    .custom-item-sliding-list {
+        margin: 0;
+        .custom-item-sliding {
+            margin: 10px 0px;
+            .custom-ion-item {
+                //Added styles to make the ion item to look like card.
+                margin: 0px;
+                width: 100%;
+                border: 1px solid #e6e8f3;
+                min-height: 80px;
+                box-shadow: none !important;
+                padding: 0px 10px;
+                .item-inner {
+                    //Handled default behaviour of ion-list.
+                    border: none !important;
+                    padding: 0px !important;
+                    ion-label {
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+    [custom-sliding-design] {
+        .vendor-card-img {
+            ion-avatar {
+                margin: 0px;
+                float: left;
+                img {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+         
+                .role1 {
+                    @extend .active-status;
+                    background: #18ea00;
+                }
+                .role2 {
+                    @extend .active-status;
+                    background: #ff3800;
+                }
+                .role3 {
+                    @extend .active-status;
+                    background: grey;
+                }
+                .role4 {
+                    @extend .active-status;
+                    background: yellow;
+                }
+                .role5 {
+                    @extend .active-status;
+                    background: blue;
+                }
+            
+        }
+        .vendor-card-content {
+            .vendor-card-title {
+                .employee-name {
+                    @extend .card-title-text;
+                    float: left;
+                }
+                .expires-alert {
+                    .expires-alert-title {
+                        @extend .card-alert-text;
+                    }
+                    .expires-alert-info {
+                        @extend .card-alert-text-bold;
+                    }
+                }
+            }
+            .vendor-description {
+                @extend .card-description-text;
+            }
+        }
+    }
+
+
+
+
+
+}

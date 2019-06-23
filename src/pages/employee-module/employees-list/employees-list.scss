@@ -1,0 +1,10 @@
+employees-list {
+    ion-item-options button{
+            background: #00d994 !important;
+            border: 1px solid #0000000d !important;
+            .button-inner span::before{
+                font-size: 20px;
+                color: white !important;
+        }
+    }
+}

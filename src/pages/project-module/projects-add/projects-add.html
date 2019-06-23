@@ -1,0 +1,34 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button (click)="pop()" class="subpage-header-icon" ion-button icon-only>
+              <span class="font-1point5rem">Cancel</span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title>{{title}}</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 text-right>
+          <ion-buttons padding-right>
+            <button (click)="saveProject()" ion-button icon-only>
+              <span class="icon-save" font20></span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contentbg" padding>
+  <ion-row>
+    <div class="roundedImg">
+      <img src="../../../assets/imgs/profile-image.png" alt="User" />
+    </div>
+  </ion-row>
+
+</ion-content>

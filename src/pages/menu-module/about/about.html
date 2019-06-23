@@ -1,0 +1,33 @@
+<ion-header class="custom-ion-header">
+    <ion-navbar hideBackButton="true" color="primary">
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col no-padding col-2 text-left>
+            <ion-buttons pl-1>
+              <button ion-button icon-only menuToggle>
+                <ion-icon name='menu'></ion-icon>
+              </button>
+            </ion-buttons>
+          </ion-col>
+          <ion-col no-padding col-8 text-center>
+            <ion-title>About</ion-title>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding class="contentbg">
+
+  <div text-center id="about">
+    <span class="icon-iff"></span>
+    <div id="name">
+      {{name}}
+    </div>
+    <div id="version">
+        Version {{version}}
+    </div>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,28 @@
+page-settings {
+  [page-list-box] {
+    border: 1px solid #e6e8f3;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 16px;
+
+    &[customPadding] {
+      padding: 0 16px 16px 16px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    [mb-16] {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .item-inner{
+    border-bottom: unset !important;
+  }
+}

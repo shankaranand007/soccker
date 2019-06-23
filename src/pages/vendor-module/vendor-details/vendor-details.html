@@ -1,0 +1,168 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 header-left-icons>
+          <ion-buttons>
+            <button ion-button text-only (click)="pop()">
+              <span> Back </span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 header-title>
+          <ion-title>{{vendor.name}}</ion-title>
+        </ion-col>
+        <ion-col no-padding col-2 header-right-icons>
+          <ion-buttons>
+            <button ion-button icon-only (click)="edit()">
+              <span class="icon-edit"></span>
+            </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+
+  <ion-grid class="vendor-details-card">
+
+    <ion-row margin-bottom>
+      <ion-col mb-1 no-padding col-12 text-left>
+        <img [src]="vendor.logoFullView" class="vendorLogo">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col no-padding col-12>
+        Company Name:
+      </ion-col>
+      <ion-col no-padding col-12>
+        {{vendor.name}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col no-padding col-12>
+        No of Employees:
+      </ion-col>
+      <ion-col no-padding col-12>
+        {{vendor.employeesCount}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col no-padding col-12>
+        Address:
+      </ion-col>
+      <ion-col no-padding col-12>
+        {{vendor.address}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col no-padding col-12>
+        Primary Contacts:
+      </ion-col>
+      <ion-col no-padding col-12 class="highlight-text-blue" *ngFor="let contact of vendor.primaryContacts">
+        <ion-label no-margin>
+          {{contact}}
+        </ion-label>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding col-12>
+        Contact Number:
+      </ion-col>
+      <ion-col no-padding col-12 class="highlight-text-blue">
+        {{vendor.contactNo}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col no-padding col-12>
+        Contact Period:
+      </ion-col>
+      <ion-col no-padding col-12>
+        {{vendor.startDate}} to {{vendor.expiryDate}}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+  <ion-row class="vendor-Employees-count">
+    <ion-col no-padding col-12>
+      No of Employees ({{vendor.employeesCount}})
+    </ion-col>
+  </ion-row>
+
+
+
+  <ion-list class="custom-item-sliding-list">
+    <ng-container *ngFor="let emp of employees;let i = index;" >
+      <ion-item-sliding #item class="custom-item-sliding">
+        <ion-item class="custom-ion-item" (click)="viewEmployee(emp.id)">
+          <ion-row custom-sliding-design>
+
+            <ion-col no-padding col-2 class="vendor-card-img">
+              <ion-avatar item-start>
+                <img [src]="emp.ProfileImg">
+              </ion-avatar>
+              <div [class]="emp.indicator"></div>
+            </ion-col>
+
+            <ion-col no-padding col-10 class="vendor-card-content">
+              <ion-row>
+                <ion-col class="vendor-card-title" no-padding col-12>
+                  <ion-row>
+                    <ion-col no-padding>
+                      <span class="employee-name" [innerText]="emp.Name"></span>
+                    </ion-col>
+                  </ion-row>
+
+
+                  <div class="expires-alert" *ngIf="emp.showExpires != undefined">
+                    <span class="expires-alert-title">Expires in:</span>
+                    <span class="expires-alert-info">{{emp.showExpires}}D</span>
+                  </div>
+                </ion-col>
+                <ion-col no-padding col-12 class="vendor-description">
+                  {{emp.Designation}}&nbsp;at&nbsp;{{emp.Vendor}}
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+
+
+
+
+
+          </ion-row>
+        </ion-item>
+
+        <ion-item-options>
+          <button ion-button color="primary" (click)="openTrack(project)">
+            <ion-icon name="icon-email"></ion-icon>
+          </button>
+          <button ion-button color="primary" (click)="openFeedback(project)">
+            <ion-icon name="icon-call"></ion-icon>
+          </button>
+          <button ion-button color="primary" (click)="openNotes(project)">
+            <span class="icon-Notes"></span>
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+    </ng-container>
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,24 @@
+{
+  "name": "Seed Ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/mobile-api",
+      "proxyUrl": "https://dev2-puma.iff.com/app-api/api/m1/"
+    },
+    {
+      "path": "/sap-api",
+      "proxyUrl": "http://sapqgw.iff.com:8000/sap/opu/odata/sap/"
+    },
+    {
+      "path": "/trend-api",
+      "proxyUrl": "https://trends-dev.iff.com/app-api/api/m1/"
+    }
+  ],
+  "id": "com.iff.dev.seed"
+}

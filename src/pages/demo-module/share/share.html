@@ -1,0 +1,31 @@
+<ion-header class="custom-ion-header">
+  <ion-navbar hideBackButton="true">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col no-padding col-2 text-left>
+          <ion-buttons pl-1>
+            <button (click)="pop()" class="subpage-header-icon" ion-button icon-only>
+              Back
+            </button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col no-padding col-8 text-center>
+          <ion-title>Share</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="contentbg" >
+<ion-item>
+  <ion-textarea placeholder="Tap here" [(ngModel)]="note" name="note" autocomplete="off" autocorrect="off">
+  </ion-textarea>
+</ion-item>
+
+<div class="wrapper">
+  <button (click)="share()" ion-button color="primary">Share Note</button>
+</div>
+
+</ion-content>

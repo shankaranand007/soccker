@@ -1,0 +1,22 @@
+page-about {
+ #about{
+  margin-top: 55%
+ }
+
+ .icon-iff{
+  font-size: 40px;
+  color: map-get($colors, primary );
+ }
+
+ #name{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top:10px;
+ }
+
+ #version{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top:5px;
+ }
+}

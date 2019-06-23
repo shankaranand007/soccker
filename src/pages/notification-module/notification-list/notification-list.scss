@@ -1,0 +1,61 @@
+page-notification-list {
+    .pd-15px {
+        padding: 15px;
+    }
+    ion-card.notification-card.card.card-ios {
+        margin-bottom: 8px;
+    }
+    .notification-meta {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #a1a1a1;
+    }
+    .notification-meta .separator {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0px 5px;
+    }
+    .day {
+        padding: 10px 0px;
+        strong {
+            @extend .card-description-text-type-1;
+        }
+    }
+    .notification-card {
+        box-shadow: unset;
+        width: 100%;
+        min-height: 91px;
+        border: 1px solid #e6e8f3;
+        border-radius: 5px;
+        .notification-left-icon {
+            position: relative;
+            div {
+                position: absolute;
+                bottom: 10px;
+                width: 35px;
+            }
+        }
+    }
+    .custom-icon-New-secondary:before {
+        content: "\e92f";
+        color: #fdb900;
+    }
+    .custom-icon-New-secondary:before {
+        font-size: 30px;
+        position: absolute;
+        top: 10px;
+    }
+    .icon-delivered {
+        font-size: 35px;
+    }
+    .icon-calender {
+        font-size: 35px;
+    }
+    .icon-comment {
+        font-size: 35px;
+    }
+    .icon-sales {
+        font-size: 35px;
+    }
+
+}
