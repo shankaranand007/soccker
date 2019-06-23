@@ -1,8 +1,7 @@
 {
   "name": "mobi-seed",
   "version": "0.0.1",
-  "author": "IFF Team",
-  "homepage": "https://iff.com/",
+  "author": "bracket-venture",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -37,30 +36,30 @@
     "@types/lodash": "^4.14.120",
     "angular-oauth2-oidc": "^3.1.4",
     "chart.js": "^2.7.3",
+    "cordova-android": "^7.1.4",
     "cordova-ios": "4.5.5",
     "cordova-open-native-settings": "^1.5.2",
-    "cordova-plugin-advanced-http": "^2.0.5",
+    "cordova-plugin-advanced-http": "^2.1.1",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-email-composer": "^0.9.2",
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
-    "cordova-plugin-ionic-webview": "^2.4.0",
+    "cordova-plugin-ionic-webview": "^2.5.0",
     "cordova-plugin-network-information": "^2.0.1",
-    "cordova-plugin-secure-storage": "^3.0.1",
+    "cordova-plugin-secure-storage": "^3.0.2",
     "cordova-plugin-speechrecognition": "^1.2.0",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-touch-id": "^3.4.0",
     "cordova-plugin-whitelist": "^1.3.3",
-    "cordova-plugin-x-socialsharing": "^5.4.4",
+    "cordova-plugin-x-socialsharing": "^5.4.6",
     "es6-promise-plugin": "^4.2.2",
     "ionic-angular": "3.9.2",
     "ionic-native-http-connection-backend": "^4.0.8",
-    "ionic-plugin-deeplinks": "^1.0.17",
+    "ionic-plugin-deeplinks": "^1.0.20",
     "ionicons": "3.0.0",
     "moment": "^2.23.0",
     "ng4-charts": "^1.0.2",
-    "parse-push-plugin": "git+https://github.com/taivo/parse-push-plugin.git",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.29"
@@ -76,28 +75,49 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-advanced-http": {},
+      "cordova-plugin-advanced-http": {
+        "OKHTTP_VERSION": "3.10.0"
+      },
       "cordova-plugin-touch-id": {
         "FACEID_USAGE_DESCRIPTION": " "
       },
       "cordova-plugin-network-information": {},
       "cordova-plugin-statusbar": {},
-      "parse-push-plugin": {},
-      "cordova-plugin-email-composer": {},
+      "cordova-plugin-email-composer": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
       "ionic-plugin-deeplinks": {
         "URL_SCHEME": "iff",
         "DEEPLINK_SCHEME": "https",
-        "DEEPLINK_HOST": "iff.com"
+        "DEEPLINK_HOST": "iff.com",
+        "ANDROID_PATH_PREFIX": "/",
+        "ANDROID_2_PATH_PREFIX": "/",
+        "ANDROID_3_PATH_PREFIX": "/",
+        "ANDROID_4_PATH_PREFIX": "/",
+        "ANDROID_5_PATH_PREFIX": "/",
+        "DEEPLINK_2_SCHEME": " ",
+        "DEEPLINK_2_HOST": " ",
+        "DEEPLINK_3_SCHEME": " ",
+        "DEEPLINK_3_HOST": " ",
+        "DEEPLINK_4_SCHEME": " ",
+        "DEEPLINK_4_HOST": " ",
+        "DEEPLINK_5_SCHEME": " ",
+        "DEEPLINK_5_HOST": " "
       },
-      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-x-socialsharing": {
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+      },
       "cordova-plugin-secure-storage": {},
       "cordova-plugin-speechrecognition": {},
       "cordova-open-native-settings": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
