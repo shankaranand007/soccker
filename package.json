@@ -37,7 +37,7 @@
     "@types/lodash": "^4.14.120",
     "angular-oauth2-oidc": "^3.1.4",
     "chart.js": "^2.7.3",
-    "cordova-ios": "4.5.5",
+    "cordova-ios": "6.2.0",
     "cordova-open-native-settings": "^1.5.2",
     "cordova-plugin-advanced-http": "^2.0.5",
     "cordova-plugin-device": "^2.0.2",
